@@ -1,6 +1,7 @@
 import math
 import random
 from routeros import login
+from routeros import utils
 
 
 def get_sum(a, b):
@@ -17,8 +18,10 @@ def get_random_num():
 
 def get_info_from_router():
     password = input('Enter your pass here: ')
-    router_cli = login('admin', password, '192.168.200.1')
-    data = router_cli('/ip/pool/print')
-    router_cli.close()
-    return data
-
+    try:
+        router_cli = login('admin', password, '192.168.200.1')
+        data = router_cli('/ip/pool/print')
+        router_cli.close()
+        return data
+    except ValueError:
+        raise utils.FatalError
