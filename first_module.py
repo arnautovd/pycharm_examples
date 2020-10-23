@@ -2,6 +2,7 @@ import math
 import random
 from routeros import login
 from routeros import utils
+import sys
 
 
 def get_sum(a, b):
@@ -25,3 +26,9 @@ def get_info_from_router():
         return data
     except ValueError:
         raise utils.FatalError
+
+
+def check_platform():
+    assert ('linux' in sys.platform)
+    print("Keep going")
+
