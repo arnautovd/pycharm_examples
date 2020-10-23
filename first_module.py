@@ -16,7 +16,7 @@ def get_random_num():
 
 
 def get_info_from_router():
-    password = input()
+    password = input('Enter your pass here: ')
     router_cli = login('admin', password, '192.168.200.1')
     data = router_cli('/ip/pool/print')
     router_cli.close()
