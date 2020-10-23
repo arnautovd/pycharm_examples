@@ -24,6 +24,7 @@ def get_info_from(file):
 if __name__ == '__main__':
     print(get_random_num())
     print(get_specific_calc(10, 2, 3))
+    print(get_info_from_router())
     print(get_info_from('text.txt'))
     print_hi('PyCharm')
 
