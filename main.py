@@ -22,6 +22,7 @@ def get_info_from(file):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    print(get_random_num())
     print(get_specific_calc(10, 2, 3))
     print(get_info_from('text.txt'))
     print_hi('PyCharm')
