@@ -13,6 +13,15 @@ def print_hello():
     print('hello again')
 
 
+def get_info_from(file):
+    with open(file, 'r') as f:
+        data = f.read()
+    return data
+
+
+print(get_info_from('text.txt'))
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
