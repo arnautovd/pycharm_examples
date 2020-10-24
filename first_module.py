@@ -37,7 +37,6 @@ def check_the_state():
     print('I am well')
 
 
-
 def check_platform():
     assert ('linux' in sys.platform)
     print("Keep going")
