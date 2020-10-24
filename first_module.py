@@ -28,6 +28,16 @@ def get_info_from_router():
         raise utils.FatalError
 
 
+def check_the_state():
+
+    states = ['ill', 'healthy']
+    state = random.choice(states)
+    if state == 'ill':
+        print('I want to get a pill')
+    print('I am well')
+
+
+
 def check_platform():
     assert ('linux' in sys.platform)
     print("Keep going")
