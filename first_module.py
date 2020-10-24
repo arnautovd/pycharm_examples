@@ -19,11 +19,14 @@ def get_random_num():
 
 def get_info_from_router():
     password = input('Enter your pass here: ')
+    list_of_data = []
     try:
         router_cli = login('admin', password, '192.168.200.1')
         data = router_cli('/ip/arp/print')
+        for arp in data:
+            list_of_data.append(arp)
         router_cli.close()
-        return data
+        return list_of_data
     except ValueError:
         raise utils.FatalError
 

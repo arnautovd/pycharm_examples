@@ -7,3 +7,7 @@ def get_special_sum(a: int, b: int) -> int:
 
 
 print(get_special_sum(1, 10))
+
+
+for i in (1, 2):
+    print(i)
